@@ -201,10 +201,7 @@
 
               <div class="">
                 <div class="red_button add_to_cart_button">
-                  <a
-                    href="https://wa.me/393896025905?text=Hello, I want to order this product: Link: https://wowvaiya.shop/single.html?id=${doc.id}"
-                    >Order Now</a
-                  >
+                  <a href="" id="order-now-link">Order Now</a>
                 </div>
               </div>
             </div>
@@ -637,6 +634,9 @@
       const sproductImage = document.getElementById("sproduct-image");
       const productColor = document.getElementById("product-color");
       const productSize = document.getElementById("product-size");
+      const orderNowLink = document.getElementById("order-now-link");
+
+      var wplink = `https://wa.me/393896025905?text=Hello, I want to order this product: Link: https://wowvaiya.shop/single.html?id=${productId}`;
 
       // Load single product details
       async function loadProductDetails() {
@@ -658,13 +658,12 @@
               productPrice.textContent = `€${product.price}`;
               var old_price = parseFloat(product.price) + 5;
               originalPrice.textContent = `€${old_price}`;
+              orderNowLink.href = wplink;
             }
             if (productImage) {
               productImage.style.backgroundImage = `url(${product.image})`;
               sproductImage.src = product.image;
             }
-
-            console.log(product);
           } else {
             console.log("No such document!");
           }
