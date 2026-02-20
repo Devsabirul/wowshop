@@ -83,7 +83,7 @@ async function loadBestSellingProducts() {
             </div>
           </div>
           <div class="red_button add_to_cart_button">
-            <a href="#">Order Now</a>
+            <a href="https://wa.me/393896025905?text=Hello, I want to order this product: ${product.name}, Price:  €${product.price}, Link: https://wowvaiya.shop/single.html?id=${doc.id}">Order Now</a>
           </div>
         </div>
       `;
