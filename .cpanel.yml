@@ -1,0 +1,6 @@
+# .cpanel.yml
+---
+deployment:
+  tasks:
+    - export DOCUMENT_ROOT=/home/wowvaiya/public_html
+    - /bin/cp -r * $DOCUMENT_ROOT
